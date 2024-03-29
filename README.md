@@ -1,9 +1,9 @@
 
-<h1 align="center">Town of Host: Enhanced (TOHE)</h1>
+<h1 align="center">Violet</h1>
 
 <br>
 
-<img align="left" alt="Cover" src="Resources/Background/TOHE-Background-Old.jpg" width="50%" height="300" /> 
+<img align="left" alt="Cover" src=".github/logo.png" width="20%" height="auto" /> 
 
 <p align="right">
   
@@ -15,111 +15,3 @@
 </p>
 <p align="center">
 
-<center>
-<a href="https://tohre.dev/" target="_blank"><img src="https://img.shields.io/badge/Website%20-%231DA1F2.svg?&style=for-the-badge&logo=vuedotjs&logoColor=white&color=3aa675"/></a>
-<a href="https://discord.gg/tohe" target="_blank"><img src="https://img.shields.io/badge/Discord%20-%231DA1F2.svg?&style=for-the-badge&logo=discord&logoColor=white&color=5662f6"/></a>
-<a href="https://github.com/0xDrMoe/TownofHost-Enhanced/releases/latest" target="_blank"><img src="https://img.shields.io/badge/Latest Version%20-%231DA1F2.svg?&style=for-the-badge&logo=github&logoColor=white&color=181717"/></a>
-</center>
-
-
-
-</p>
-
----
-
-<br>
-
-**Credit to these mods and their developers for the code and help:**
-### :star: [TOHRE](https://github.com/Loonie-Toons/) 
-> 
-> - TOH: Enhanced was forked from TOH-RE
->
-### :star: [TOHE](https://github.com/KARPED1EM/TownOfHostEdited) :
-> 
-> - TOHRE was forked from TOHE
-> 
-### :star: [TOH](https://github.com/tukasa0001/TownOfHost) :
-> 
-> - Our repo is based initially on TOH
-> 
-### :star: [TOHY](https://github.com/Yumenopai/TownOfHost_Y) :
-> 
-> - Many role ideas
-> - Provided roles: AntiAdminer, CursedWolf, Workaholic, Greedier (Greedy), DarkHide (Stalker)
-> - Reference: Modify game announcement
-> 
-### :star: [TOH:TOR](https://github.com/music-discussion/TownOfHost-TheOtherRoles) :
-> 
-> - Many role ideas
-> - Reference: Exile Confirm
-> - Reference: Split RPC Pack
-> 
-### :star: [SNR](https://github.com/ykundesu/SuperNewRoles) :
-> 
-> - Reference: Credentials menu
-> - Reference: Switch Horse Mode
-> - Reference: Search Mod Game
-> - Reference: Custom Button
->
-### :star: [TOP](https://github.com/tugaru1975/TownOfPlus) :
-> 
-> - Reference: Zoom
-> 
-### :star: [RHR](https://github.com/sansaaaaai/Revolutionary-host-roles) :
-> 
-> - Reference: Modify settings menu
-> 
-### :star: [TOH+](https://github.com/SkullCreeper/TownOfHostPlus)
->
-> - Provided roles: Shapeshifter, Engineer, Scientist, Marshall, Poisoner, Necroview, Sidekick
-> - Bait and Beartrap as add-ons
->
-### :star: [Project Lotus](https://github.com/ImaMapleTree/Lotus)
->
-> - Ideas for some roles (such as Crusader)
-> 
-### :star: [TOHE+](https://github.com/Gurge44/TOHE_PLUS)
->
-> - Provided roles: Pyromaniac, Necromancer, Head Hunter (Huntsman), Alchemist, and others
-> - Game Mode: FFA
-> - Improved Role Summary
-> - Dark Theme
-> - Improved Role Spawns
-> - Some ideas to improve performance
-### :star: [TOHEX](https://github.com/TOHEX-Official/TownOfHostEdited-Xi)
->
-> - Provided role: Swapper, Berserker, Randomizer and Blackmailer
-> - Improve chat spam system (ChatManager.cs)
-### :star: [Stellar Roles](https://github.com/Mr-Fluuff/StellarRolesAU)
->
-> - Provided role: Inspector (Inspector)
-### :star: [Mini.RegionInstall](https://github.com/miniduikboot/Mini.RegionInstall)
->
-> - Using Mini.RegionInstall to add modded server regions
-
----
-
-# Legal License Notice
-
-This project utilizes a third-party API, custom-coded by The Enhanced Network. founded by Moe Wehbeh, which is not subject to the GPL 3.0 license. However, please be aware that the project itself, including any modifications, additions, or integrations made to interact with the API, is governed by the terms of the GNU General Public License version 3.0 (GPL-3.0).
-
-## Licensing Information
-
-This project is licensed under the GNU General Public License version 3.0. For more details, please refer to the [LICENSE](https://github.com/0xDrMoe/TownofHost-Enhanced/blob/main/LICENSE) file.
-
-### Third-Party API Access
-
-To obtain an API token for this project, you must join our Discord server and open a ticket. Follow the steps below:
-
-1. **Join our Discord Server:**
-   https://discord.gg/tohe
-
-2. **Open a Ticket:**
-   Once you've joined the server, open a ticket and request an API token for TOHE API. Provide any necessary information as instructed in the ticket system.
-
-3. **Token Usage:**
-   Upon receiving the API token, follow the instructions in the documentation to configure and use the token with the project.
-
-**Note:** Access to the API is subject to our terms and conditions. Failure to comply with these terms may result in revocation of API access.
-
----
