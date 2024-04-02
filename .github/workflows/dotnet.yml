@@ -17,7 +17,7 @@ jobs:
       run: |
         dotnet build -c Debug
         mkdir -p ./publish
-        cp /home/runner/work/Violet-TOHE/Violet-Dev/bin/Debug/net6.0/TOHE.dll ./publish/
+        cp /home/runner/work/Violet-AU/Violet-TOHE/bin/Debug/net6.0/TOHE.dll ./publish/
       # Archive the files to be passed to the release job
     - name: Archive build artifacts
       uses: actions/upload-artifact@v2
