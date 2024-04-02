@@ -48,8 +48,8 @@ jobs:
       shell: bash
 
     - name: Get some values needed for the release
-          id: release_values
-          run: |
+      id: release_values
+      run: |
             echo "release_tag=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
     - name: Create or Update Release
