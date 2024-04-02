@@ -1,0 +1,87 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        dotnet build -c Debug
+        mkdir -p ./publish
+        cp /home/runner/work/Violet-TOHE/Violet-Dev/bin/Debug/net6.0/TOHE.dll ./publish/
+      # Archive the files to be passed to the release job
+    - name: Archive build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-artifacts
+        path: ./publish
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v4.0.0
+      with:
+        dotnet-version: 6.0.100
+
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+
+    - name: Install softprops/action-gh-release
+      run: |
+        RELEASES_VERSION="v1.1.0"  # Replace with the desired version
+        GH_ACTIONS_RELEASES_URL="https://github.com/softprops/action-gh-release/releases/download/${RELEASES_VERSION}/release"
+        curl -sSL $GH_ACTIONS_RELEASES_URL -o /usr/local/bin/gh-release
+        chmod +x /usr/local/bin/gh-release
+      shell: bash
+
+    - name: Get some values needed for the release
+          id: release_values
+          run: |
+            echo "release_tag=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+    - name: Create or Update Release
+      run: |
+        if gh release view Violet-AU/Violet-TOHE > /dev/null 2>&1; then
+          # Update the existing release
+          gh release edit Violet-AU/Violet-TOHE \
+            --title "Dev Build $RELEASE_TAG" \
+            --notes "This release will always have the latest Source DLL, go to main repo for source code."
+        else
+          # Create a new release if it doesn't exist
+          gh release create Violet-AU/Violet-TOHE \
+            --title "Dev Build $RELEASE_TAG" \
+            --notes "This release will always have the latest Source DLL, go to main repo for source code." \
+            --target main
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
+        DOTNET_ROOT: /usr/share/dotnet
+
+
+    - name: Download build artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: build-artifacts
+        path: ./publish
+
+    - name: Deploy Release
+      run: |
+        gh release upload Violet-AU/Violet-TOHE \
+        ./publish/TOHE.dll \
+        --clobber 
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
+        DOTNET_ROOT: /usr/share/dotnet
