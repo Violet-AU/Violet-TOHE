@@ -67,7 +67,7 @@ jobs:
             --target main
         fi
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
+        GH_TOKEN: ${{ github.token }}
         DOTNET_ROOT: /usr/share/dotnet
 
 
@@ -83,5 +83,5 @@ jobs:
         ./publish/TOHE.dll \
         --clobber 
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
+        GH_TOKEN: ${{ github.token }}
         DOTNET_ROOT: /usr/share/dotnet
