@@ -58,18 +58,7 @@ public class dbConnect
             Logger.Info("Finished Sync flow.", "dbConnect.init");
         }
     }
-
-    static void HandleFailure(string errorMessage)
-    {
-        Logger.Error(errorMessage, "dbConnect.init");
-        if (AmongUsClient.Instance.mode != InnerNet.MatchMakerModes.None)
-            AmongUsClient.Instance.ExitGame(DisconnectReasons.ExitGame);
-
-        DataManager.Player.Account.LoginStatus = EOSManager.AccountLoginStatus.Offline;
-        DataManager.Player.Save();
-        DestroyableSingleton<DisconnectPopup>.Instance.ShowCustom(GetString("dbConnect.InitFailure"));
-    }
-
+    
     private static string GetToken()
     {
         string apiToken = "";
