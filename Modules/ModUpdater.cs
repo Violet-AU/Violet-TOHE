@@ -15,7 +15,7 @@ namespace TOHE;
 public class ModUpdater
 {
     //private static readonly string URL_2018k = "http://api.tohre.dev";
-    private static readonly string URL_Github = "https://api.github.com/repos/0xDrMoe/TownofHost-Enhanced";
+    private static readonly string URL_Github = "https://api.github.com/repos/Violet-AU/Violet-TOHE";
     //public static readonly string downloadTest = "https://github.com/Pietrodjaowjao/TOHEN-Contributions/releases/download/v123123123/TOHE.dll";
     public static bool hasUpdate = false;
     //public static bool isNewer = false;
@@ -82,7 +82,7 @@ public class ModUpdater
             
             using (HttpClient client = new(httpClientHandler))
             {
-                client.DefaultRequestHeaders.Add("User-Agent", "TOHE Updater");
+                client.DefaultRequestHeaders.Add("User-Agent", "Violet Updater");
                 var response = client.GetAsync(new Uri(url), HttpCompletionOption.ResponseContentRead).Result;
 
                 if (!response.IsSuccessStatusCode || response.Content == null)

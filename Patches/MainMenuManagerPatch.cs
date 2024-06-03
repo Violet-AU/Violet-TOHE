@@ -80,6 +80,7 @@ class MainMenuManagerLateUpdatePatch
         __instance.playButton.transform.gameObject.SetActive(Options.IsLoaded);
 
         var PlayOnlineButton = __instance.PlayOnlineButton;
+    }
 
 }
 [HarmonyPatch(typeof(MainMenuManager))]

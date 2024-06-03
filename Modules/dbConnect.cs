@@ -58,6 +58,11 @@ public class dbConnect
             Logger.Info("Finished Sync flow.", "dbConnect.init");
         }
     }
+
+    static void HandleFailure(string errorMessage)
+    {
+        
+    }
     
     private static string GetToken()
     {

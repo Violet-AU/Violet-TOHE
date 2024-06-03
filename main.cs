@@ -20,7 +20,7 @@ using UnityEngine;
 [assembly: AssemblyVersion(TOHE.Main.PluginVersion)]
 namespace TOHE;
 
-[BepInPlugin(PluginGuid, "TOHE", PluginVersion)]
+[BepInPlugin(PluginGuid, "Violet", PluginVersion)]
 [BepInIncompatibility("jp.ykundesu.supernewroles")]
 [BepInProcess("Among Us.exe")]
 public class Main : BasePlugin
@@ -29,8 +29,9 @@ public class Main : BasePlugin
     public const string OriginalForkId = "OriginalTOH";
 
     public static readonly string ModName = "Violet";
-    public static readonly string ForkId = "TOHE";
-    public static readonly string ModColor = "#ffc0cb";
+    public static readonly string ForkId = "Violet";
+    public static readonly string ModColor = "#8000FF";
+    public static readonly string TOHEModColor = "#ffc0cb";
     public static readonly bool AllowPublicRoom = true;
 
     public static HashAuth DebugKeyAuth { get; private set; }
@@ -39,9 +40,9 @@ public class Main : BasePlugin
 
     public static ConfigEntry<string> DebugKeyInput { get; private set; }
 
-    public const string PluginGuid = "com.0xdrmoe.townofhostenhanced";
-    public const string PluginVersion = "2024.0601.0001.0001"; // YEAR.MMDD.VERSION.CANARYDEV
-    public const string PluginDisplayVersion = "1.0.0";
+    public const string PluginGuid = "xyz.thetahalo.violet";
+    public const string PluginVersion = "2024.0601.0001.0002"; // YEAR.MMDD.VERSION.CANARYDEV
+    public const string PluginDisplayVersion = "1.0.0 Alpha 2";
     public static readonly string SupportedVersionAU = "2024.3.5";
 
     /******************* Change one of the three variables to true before making a release. *******************/
@@ -53,14 +54,14 @@ public class Main : BasePlugin
 
     public static readonly bool ShowUpdateButton = true;
 
-    public static readonly bool ShowGitHubButton = true;
+    public static readonly bool ShowGitHubButton = false;
     public static readonly string GitHubInviteUrl = "https://github.com/Violet-AU/Violet-TOHE";
 
     public static readonly bool ShowDiscordButton = false;
     public static readonly string DiscordInviteUrl = "https://discord.gg/tohe";
 
     public static readonly bool ShowWebsiteButton = false;
-    public static readonly string WebsiteInviteUrl = "https://tohre.dev";
+    public static readonly string WebsiteInviteUrl = "https://violet.epstheta.xyz";
     
     public static readonly bool ShowKofiButton = false;
     public static readonly string kofiInviteUrl = "https://ko-fi.com/TOHEN";
@@ -544,10 +545,7 @@ public class Main : BasePlugin
 
         Harmony.PatchAll();
 
-        if (!DebugModeManager.AmDebugger) ConsoleManager.DetachConsole();
-        else ConsoleManager.CreateConsole();
-
-        TOHE.Logger.Msg("========= TOHE loaded! =========", "Plugin Load");
+        TOHE.Logger.Msg("========= Violet loaded! =========", "Plugin Load");
     }
 }
 public enum CustomRoles
