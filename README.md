@@ -1,4 +1,4 @@
-
+## Deprecated in favour of supporting Project: Lotus, go check them out at https://github.com/Lotus-AU/LotusContinued
 <h1 align="center">Violet</h1>
 
 <br>
